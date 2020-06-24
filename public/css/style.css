@@ -1,0 +1,67 @@
+.content{
+    width: 75%;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+}
+
+button{
+    padding: 10px;
+    border: 1px solid red;
+    color: red;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+.content .dog, .content .cat{
+    display: none;
+}
+
+.content .show{
+    display: block;
+}
+
+.voteBtn{
+    display: none;
+}
+
+
+
+.votes .likesDog, .votes .likesCat {
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.votes .dislikesDog, .votes .dislikesCat {
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.votes{
+    display: none;
+}
+
+.votes img {
+    width: 30%;
+    padding-top: 30px;
+}
+
+.returnBtn{
+    display: none;
+}
+
+.resultCat, .resultDog{
+    display: none;
+}
+
+span{
+    position: absolute;
+    color: red;
+    font-size: 20px;
+}
+
+.btn{
+    display: none;
+}
