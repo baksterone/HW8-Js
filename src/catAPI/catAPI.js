@@ -1,3 +1,9 @@
+import {catNews} from '../NYT/NYT_Api';
+
+let catLinks = document.querySelector('.catNews');
+let newImgCat = document.querySelector('.catImg');
+let petName;
+
 const CAT_IMG = 'https://api.thecatapi.com/v1/images/search?size=full';
 
 // Получение картинок котов
@@ -11,10 +17,20 @@ let showCat = document.querySelector('.catBtn').addEventListener('click', () => 
     let showCat = getCat();
     showCat.then(response =>{response.json().then(data => {
         
-        let newImg = document.querySelector('.catImg')
-        newImg.src = data[0].url;
-        newImg.alt = 'cat';
-        newImg.style.display = 'block';
+        
+        newImgCat.src = data[0].url;
+        newImgCat.alt = 'cat';
+        
+        if (data[0].breeds.length == 0){
+            petName = "cat";
+          } else{
+            petName = data[0].breeds[0].name;
+          }       
+           catLinks = document.querySelector('.catNews');
+           catLinks.innerHTML = '';
+        
+
+        catNews(petName);
         
         document.querySelector('.voteBtnCat').classList.add('show');
         document.querySelector('.cat').classList.add('show');
@@ -29,5 +45,4 @@ let showCat = document.querySelector('.catBtn').addEventListener('click', () => 
 
 
 
-export {showCat};
-export {getCat};
+export {showCat, getCat, catLinks, newImgCat};

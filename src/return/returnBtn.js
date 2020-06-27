@@ -9,7 +9,7 @@ let ret = document.querySelector('.returnBtn').addEventListener('click', () => {
     document.querySelector('.resultCat').style.display = 'none';
     document.querySelector('.votes').style.display = 'none';
     document.querySelector('.login').style.display = 'block';
-    clearInterval(intervalDog);
+    // clearInterval(intervalDog);
 })
 
 export {ret};

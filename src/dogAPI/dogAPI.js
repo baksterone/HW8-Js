@@ -1,3 +1,8 @@
+import {dogNews} from '../NYT/NYT_Api';
+
+let dogLinks = document.querySelector('.dogNews');
+let newImgDog = document.querySelector('.dogImg');
+let petName;
 const DOG_IMG = 'https://api.thedogapi.com/v1/images/search';
 
 // Получение картинок собак
@@ -11,9 +16,22 @@ let showDog = document.querySelector('.dogBtn').addEventListener('click', () => 
     let showDog = getDog();
     showDog.then(response =>{ response.json().then(data => {
         
-        let newImg = document.querySelector('.dogImg')
-        newImg.src = data[0].url;
-        newImg.alt = 'dog';
+        
+        newImgDog.src = data[0].url;
+        newImgDog.alt = 'dog';
+
+        if (data[0].breeds.length == 0){
+            petName = "dog";
+          } else{
+            petName = data[0].breeds[0].name;
+          }       
+           dogLinks = document.querySelector('.dogNews');
+           dogLinks.innerHTML = '';
+        
+
+        dogNews(petName);
+        
+        
         
         
         document.querySelector('.voteBtnDog').classList.add('show');
@@ -28,6 +46,7 @@ let showDog = document.querySelector('.dogBtn').addEventListener('click', () => 
 })
 
 
-
+export {dogLinks};
 export {showDog};
 export {getDog};
+export {newImgDog};

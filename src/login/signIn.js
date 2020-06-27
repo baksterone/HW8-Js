@@ -13,7 +13,7 @@ function timeDog(){
     })
 }
 
-let intervalDog = setInterval(timeDog, 5000);
+// let intervalDog = setInterval(timeDog, 5000);
 
 
 let guest = document.querySelector('.guest').addEventListener('click', () => {
@@ -21,11 +21,11 @@ let guest = document.querySelector('.guest').addEventListener('click', () => {
     document.querySelector('.voteBtnDog').style.display = 'none';
     document.querySelector('.returnBtn').style.display = 'block';
     document.querySelector('.dog').classList.add('show');
-    intervalDog;
+    // intervalDog;
 })
 
 let admin = document.querySelector('.signIn').addEventListener('click', () => {
-    if(name == 'admin' && pass == 'admin'){
+    if(name.trim() === 'admin' && pass.trim() === 'admin'){
         document.querySelector('.btn').style.display = 'block';
         document.querySelector('.login').style.display = 'none';
         
@@ -34,4 +34,4 @@ let admin = document.querySelector('.signIn').addEventListener('click', () => {
 
 export {admin};
 export {guest};
-export {intervalDog};
+// export {intervalDog};
