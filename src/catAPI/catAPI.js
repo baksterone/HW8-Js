@@ -32,8 +32,8 @@ let showCat = document.querySelector('.catBtn').addEventListener('click', () => 
 
         catNews(petName);
         
-        document.querySelector('.voteBtnCat').classList.add('show');
-        document.querySelector('.cat').classList.add('show');
+        document.querySelector('.voteBtnCat').style.display = 'block';
+        document.querySelector('.cat').style.display = 'block';
         document.querySelector('.btn').style.display = 'none';
         document.querySelector('.returnBtn').style.display = 'block';
         document.querySelector('.resultDog').style.display = 'none';

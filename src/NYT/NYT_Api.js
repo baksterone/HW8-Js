@@ -9,7 +9,7 @@ function dogNews(petName){
             response.json()
               .then(data =>{
                 let i;
-                for (i=0;i < 3;i++){
+                for (i=0;i < 5;i++){
                   let a = document.createElement('a'),
                       arr = data.response.docs[i];
                   dogLinks.append(a);
@@ -26,7 +26,7 @@ function catNews(petName){
             response.json()
               .then(data =>{
                 let i;
-                for (i=0;i < 3;i++){
+                for (i=0;i < 5;i++){
                   let a = document.createElement('a'),
                       arr = data.response.docs[i];
                   catLinks.append(a);

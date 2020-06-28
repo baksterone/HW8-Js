@@ -34,13 +34,13 @@ let showDog = document.querySelector('.dogBtn').addEventListener('click', () => 
         
         
         
-        document.querySelector('.voteBtnDog').classList.add('show');
-        document.querySelector('.dog').classList.add('show');
+        document.querySelector('.voteBtnDog').style.display = 'block';
+        document.querySelector('.dog').style.display = 'block';
         document.querySelector('.btn').style.display = 'none';
         document.querySelector('.returnBtn').style.display = 'block';
         document.querySelector('.resultDog').style.display = 'block';
         document.querySelector('.resultCat').style.display = 'none';
-        
+        dogLinks.style.display = 'flex';
     })  
 })
 })
