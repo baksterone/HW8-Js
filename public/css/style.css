@@ -13,6 +13,7 @@ button{
     color: red;
     background-color: #fff;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .content .dog, .content .cat{
